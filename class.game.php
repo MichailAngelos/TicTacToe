@@ -6,7 +6,7 @@ class game {
 	var $over;
     var $won;
 
-	/** Etoimazetai to perivalon gia na arxisei to paixnidi **/
+	/** Preparing game **/
 	function start()
 	{
         $this->player = "X";
@@ -16,14 +16,14 @@ class game {
 		$this->won = false;
 	}
 	
-	/** Telos paixndiou**/
+	/** When game is over **/
 	function end()
 	{
 		$this->over = true;
 	}
 	
 
-	/** Epistrefi ama to paixnidi exei teliosi**/
+	/** True when the game is over**/
 	function isOver()
 	{
 		if ($this->won)
@@ -37,17 +37,15 @@ class game {
 	}
 
 }
-//end game class
 
 
-
-/** Minima lathous **/
+/** Error Message **/
 function errorMsg($msg)
 {
 	return "<div class=\"errorMsg\">$msg</div>";
 }
 
-/** Minima epitixias **/
+/** Success Message **/
 function successMsg($msg)
 {
 	return "<div class=\"successMsg\">$msg</div>";
