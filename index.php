@@ -3,10 +3,8 @@
 require_once('class.game.php');
 require_once('class.tictactoe.php');
 
-//apothikeusi pliroforion kathos ginete refresh i selida
 session_start();
 
-//aman den arxise to paixnidi na arxizei
 if (!isset($_SESSION['game']['tictactoe']))
 	$_SESSION['game']['tictactoe'] = new tictactoe();
 
